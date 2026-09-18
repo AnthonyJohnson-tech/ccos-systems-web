@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" role="img" aria-label="CCOS">
+<title>CCOS Relational Type / Bridge v1.0</title>
+<g fill="none" stroke="#101820" stroke-width="58" stroke-linecap="butt">
+<path d="M190 54 A82 82 0 1 0 190 206"/>
+<path d="M390 54 A82 82 0 1 0 390 206"/>
+<circle cx="550" cy="130" r="82"/>
+<path d="M790 60 H700 C660 60 650 115 690 124 L758 139 C808 150 800 202 752 202 H652"/>
+</g>
+<rect x="265" y="112" width="92" height="36" rx="2" fill="#10B981"/>
+</svg>
