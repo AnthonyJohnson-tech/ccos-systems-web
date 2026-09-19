@@ -1,118 +1,28 @@
-const portfolio = [
-  {
-    name: "Ninthline",
-    category: "Opportunity Intelligence",
-    description:
-      "Surfaces useful opportunities and the relationships that can make them actionable.",
-  },
-  {
-    name: "Forney Connected",
-    category: "Local media + community infrastructure",
-    description:
-      "Helps a growing community see the information, people, and activity shaping local life.",
-  },
-  {
-    name: "ForneyJobs",
-    category: "Local employment infrastructure",
-    description:
-      "Makes verified local work easier to discover, evaluate, and pursue.",
-  },
+const ventures = [
+  { number: "01", name: "Ninthline", category: "Opportunity Intelligence", role: "Finds meaningful signals, investigates context, and develops specific opportunities worth evaluating.", status: "Customer-facing brand" },
+  { number: "02", name: "Forney Connected", category: "Local media + community infrastructure", role: "Helps a growing community understand the information, people, and activity shaping local life.", status: "Independent product" },
+  { number: "03", name: "ForneyJobs", category: "Local employment infrastructure", role: "Makes verified local work easier to discover, evaluate, and pursue.", status: "Independent product" },
 ];
 
-const connections = ["People", "Organizations", "Information", "Resources", "Communities", "Opportunity"];
+const commitments = [
+  ["Clear ownership", "Every product has an accountable operating home and a defined relationship to CCOS."],
+  ["Independent identity", "Products keep the voice, audience, and experience their purpose requires."],
+  ["Governed systems", "Shared standards make consequential decisions, evidence, and responsibilities visible."],
+  ["Claim restraint", "The company describes what exists and how it operates without inventing scale or certainty."],
+];
 
 export default function Home() {
-  return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="CCOS home">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcSet="/identity/CCOS_Wordmark_Primary_Dark_v1.0.svg" />
-            <img src="/identity/CCOS_Wordmark_Primary_Light_v1.0.svg" alt="CCOS" width="174" height="45" />
-          </picture>
-        </a>
-        <nav aria-label="Primary navigation">
-          <a href="#institution">Institution</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#founder">Accountability</a>
-        </nav>
-      </header>
-
-      <section className="hero" id="top" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="eyebrow">Community Connection Operating Systems</p>
-          <h1 id="hero-title">Building systems that connect people, organizations, and opportunity.</h1>
-          <p className="hero-intro">
-            Community Connection Operating Systems develops and operates products, systems,
-            and community infrastructure designed to make useful connections easier to find and act on.
-          </p>
-          <a className="text-link" href="#portfolio">Explore the portfolio <span aria-hidden="true">↓</span></a>
-        </div>
-        <div className="hero-mark" aria-hidden="true">
-          <img src="/identity/CCOS_Bridge_Avatar_Light_v1.0.svg" alt="" width="520" height="520" />
-        </div>
-      </section>
-
-      <section className="institution" id="institution" aria-labelledby="institution-title">
-        <div className="section-lead">
-          <p className="section-number">01 / Institution</p>
-          <h2 id="institution-title">Connection is only useful when it helps something move.</h2>
-        </div>
-        <div className="institution-copy">
-          <p>
-            CCOS is the institutional layer behind work that connects information with action,
-            communities with resources, and organizations with people who can create value together.
-          </p>
-          <p>
-            The company provides coherent ownership and accountability while allowing every product
-            to keep the identity, audience, and operating model its purpose requires.
-          </p>
-        </div>
-        <ul className="connection-grid" aria-label="What CCOS connects">
-          {connections.map((item, index) => (
-            <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="portfolio" id="portfolio" aria-labelledby="portfolio-title">
-        <div className="section-lead portfolio-lead">
-          <p className="section-number">02 / Portfolio</p>
-          <h2 id="portfolio-title">Independent products. Shared institutional provenance.</h2>
-          <p>Each product serves a distinct need and stands on its own. CCOS supplies the accountable operating layer behind it.</p>
-        </div>
-        <div className="portfolio-list">
-          {portfolio.map((product, index) => (
-            <article className="product" key={product.name}>
-              <p className="product-index">0{index + 1}</p>
-              <div>
-                <p className="product-category">{product.category}</p>
-                <h3>{product.name}</h3>
-                <p>{product.description}</p>
-              </div>
-              <p className="attribution">A CCOS product.</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="founder" id="founder" aria-labelledby="founder-title">
-        <p className="section-number">03 / Accountability</p>
-        <div>
-          <h2 id="founder-title">An institution should make responsibility visible.</h2>
-          <p className="founder-name">Anthony Johnson</p>
-          <p>Founder, CCOS</p>
-        </div>
-      </section>
-
-      <footer>
-        <img src="/identity/CCOS_Wordmark_White_v1.0.svg" alt="CCOS" width="150" height="39" />
-        <div>
-          <p>Community Connection Operating Systems LLC</p>
-          <p>Building useful connections with clarity, restraint, and accountability.</p>
-        </div>
-        <p className="copyright">© {new Date().getUTCFullYear()} CCOS</p>
-      </footer>
-    </main>
-  );
+  return <main>
+    <a className="skip-link" href="#content">Skip to content</a>
+    <header className="site-header"><div className="header-inner"><a className="brand" href="#top" aria-label="CCOS home"><img src="/identity/CCOS_Wordmark_Primary_Light_v1.0.svg" alt="CCOS" width="174" height="45" /></a><nav aria-label="Primary navigation"><a href="#company">Company</a><a href="#model">Operating model</a><a href="#portfolio">Portfolio</a><a href="/founder">Founder</a></nav></div></header>
+    <div id="content">
+      <section className="hero" id="top" aria-labelledby="hero-title"><div className="hero-main"><p className="eyebrow">Community Connection Operating Systems</p><h1 id="hero-title">Building the operating layer behind useful connection.</h1><p className="hero-intro">CCOS develops and operates products, brands, and systems that help people, organizations, information, resources, and opportunity relate more usefully.</p><a className="arrow-link" href="#company">Understand the company <span aria-hidden="true">↓</span></a></div><aside className="company-card" aria-label="Company profile"><div className="bridge-frame"><img src="/identity/CCOS_Bridge_Avatar_Light_v1.0.svg" alt="" width="280" height="280" /></div><dl><div><dt>Entity</dt><dd>Community Connection Operating Systems LLC</dd></div><div><dt>Role</dt><dd>Operating company</dd></div><div><dt>Orientation</dt><dd>Products, brands, systems, and community infrastructure</dd></div></dl></aside></section>
+      <section className="company" id="company" aria-labelledby="company-title"><div className="section-key"><span>01</span><p>Company</p></div><div className="company-statement"><h2 id="company-title">Distinct work needs a coherent institutional home.</h2><p className="large-copy">CCOS supplies ownership, operating discipline, and continuity while allowing each product to remain specific to its audience and purpose.</p></div><div className="company-detail"><p>The company exists to make useful connection easier to build and sustain. That includes the systems behind customer-facing brands as well as the standards that govern how those systems are operated.</p><p>CCOS does not ask every venture to look or behave alike. It provides shared accountability without erasing product identity.</p></div></section>
+      <section className="model" id="model" aria-labelledby="model-title"><div className="model-head"><div className="section-key light"><span>02</span><p>Operating model</p></div><h2 id="model-title">Build deliberately.<br/>Govern visibly.<br/>Steward for continuity.</h2><p>CCOS turns ideas into durable operating systems through three connected responsibilities.</p></div><ol className="model-list"><li><span>01 / Build</span><h3>Purpose becomes a working system.</h3><p>Define the audience, problem, product boundary, and operating conditions before expanding capability.</p></li><li><span>02 / Govern</span><h3>Responsibility stays visible.</h3><p>Establish authority, evidence, controls, and review paths for consequential work.</p></li><li><span>03 / Steward</span><h3>Useful work can endure.</h3><p>Maintain clear ownership, documented operations, and a practical path for correction and growth.</p></li></ol></section>
+      <section className="portfolio" id="portfolio" aria-labelledby="portfolio-title"><div className="portfolio-intro"><div className="section-key"><span>03</span><p>Portfolio</p></div><h2 id="portfolio-title">Independent ventures.<br/>Shared provenance.</h2><p>Each venture serves a distinct need and stands in its own identity. CCOS provides the accountable operating company behind it.</p></div><div className="venture-list">{ventures.map((venture) => <article className="venture" key={venture.name}><span className="venture-number">{venture.number}</span><div><p className="venture-category">{venture.category}</p><h3>{venture.name}</h3><p>{venture.role}</p></div><div className="venture-meta"><span>{venture.status}</span><b>A CCOS product.</b></div></article>)}</div></section>
+      <section className="accountability" id="accountability" aria-labelledby="accountability-title"><div className="accountability-head"><div className="section-key light"><span>04</span><p>Accountability</p></div><div><h2 id="accountability-title">An institution should make responsibility visible.</h2><p className="founder-intro">Anthony Johnson founded CCOS to build useful systems with clear ownership, durable evidence, and accountable decisions.</p><a className="arrow-link light-link" href="/founder">Meet the Founder <span aria-hidden="true">→</span></a></div><div className="founder-line"><strong>Anthony Johnson</strong><span>Founder, CCOS</span></div></div><div className="commitments">{commitments.map(([title, copy], index) => <article key={title}><span>{String(index + 1).padStart(2,"0")}</span><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
+      <section className="closing" aria-labelledby="contact-title"><div><img src="/identity/CCOS_Bridge_Avatar_Light_v1.0.svg" alt="" width="180" height="180" /></div><div className="closing-copy"><p id="contact-title">Connection becomes valuable when the systems around it are clear, accountable, and built to last.</p><a className="contact-link" href="mailto:anthony@ccos.systems">anthony@ccos.systems <span aria-hidden="true">→</span></a></div></section>
+    </div>
+    <footer><img src="/identity/CCOS_Wordmark_White_v1.0.svg" alt="CCOS" width="150" height="39" /><div><p>Community Connection Operating Systems LLC</p><p>Products, brands, systems, and community infrastructure.</p><a href="mailto:anthony@ccos.systems">anthony@ccos.systems</a></div><p className="copyright">© {new Date().getUTCFullYear()} CCOS</p></footer>
+  </main>;
 }
